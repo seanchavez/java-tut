@@ -1,23 +1,25 @@
 package employeeApp;
 
+;
+
 public class Employee {
   private static int maxId = 0;
   private int id;
   private String fname;
   private String lname;
   private double salary;
-  private Boolean has401k;
+  private Boolean has401K;
   private int companyID;
-  private int healthPlanId;
+  private int healthPlanID;
 
-  public Employee(String fname, String lname, double salary, Boolean has401k, int companyID, int healthPlanID) {
+  public Employee(String fname, String lname, double salary, Boolean has401K, int companyID, int healthPlanID) {
     maxId++;
     id = maxId;
 
     this.fname = fname;
     this.lname = lname;
     this.salary = salary;
-    this.has401k = has401K;
+    this.has401K = has401K;
     this.companyID = companyID;
     this.healthPlanID = healthPlanID;
   }
@@ -70,4 +72,11 @@ public class Employee {
     this.healthPlanID = healthPlanID;
   }
 
+  @Override
+  public String toString() {
+    String rtnStr = "id: " + id + "\n" + "fname: " + fname + "\n" + "lname: " + lname + "\n" + "salary: " + salary
+        + "\n" + "has401K: " + has401K + "\n" + "companyID: " + companyID + "\n" + "healthPlanID: " + healthPlanID
+        + "\n";
+    return rtnStr;
+  }
 }
