@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class fileStreamTest {
+public class FileStreamTest {
   public static void main(String args[]) {
     try {
       byte bWrite[] = { 11, 21, 3, 40, 5 };
